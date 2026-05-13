@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #131313;
+  --color-surface: #131313;
+  --color-surface-container: #20201f;
+  --color-surface-container-high: #2a2a2a;
+  --color-primary: #c9c6c5;
+  --color-secondary: #00eefc;
+  --color-tertiary: #abd600;
+  --color-on-background: #e5e2e1;
+  --color-on-surface: #e5e2e1;
+  --color-on-surface-variant: #c4c7c7;
+  --color-secondary-container: #00eefc;
+  --color-on-secondary-container: #00686f;
+  --color-secondary-fixed: #7df4ff;
+  --color-outline: #8e9192;
+  --color-outline-variant: #444748;
+
+  --spacing-section-gap: 160px;
+  --spacing-margin-mobile: 20px;
+  --spacing-margin-desktop: 64px;
+  --spacing-gutter: 24px;
+  --spacing-container-max: 1440px;
+}
+
+@layer utilities {
+  .font-display-xl {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 120px;
+    line-height: 110%;
+    letter-spacing: -0.04em;
+    font-weight: 800;
+  }
+  .font-display-xl-mobile {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 56px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+  }
+  .font-headline-lg {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 64px;
+    line-height: 120%;
+    font-weight: 700;
+  }
+  .font-headline-lg-mobile {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 32px;
+    line-height: 120%;
+    font-weight: 700;
+  }
+  .font-body-lg {
+    font-family: 'Geist', sans-serif;
+    font-size: 18px;
+    line-height: 160%;
+    font-weight: 400;
+  }
+  .font-body-md {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    line-height: 160%;
+    font-weight: 400;
+  }
+  .font-label-technical {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+body {
+  @apply bg-background text-on-surface antialiased selection:bg-secondary-container selection:text-surface;
+}
